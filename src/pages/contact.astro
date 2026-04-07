@@ -1,0 +1,89 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+
+const pageTitle = `Contact | ${SITE_TITLE}`;
+const pageDescription = 'Contact Lisa AI Consulting.';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={pageTitle} description={pageDescription} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section>
+				<h1>Contact</h1>
+				<p>
+					If your organization is exploring AI adoption and needs a practical view of privacy,
+					governance, and implementation risk, I’d be glad to connect.
+				</p>
+				<p>
+					I’m especially interested in conversations with healthcare, government, and enterprise
+					teams working through responsible AI adoption.
+				</p>
+			</section>
+
+			<section>
+				<h2>Get in Touch</h2>
+				<p>
+					Email: <a href="mailto:lisabrewercanter@gmail.com">lisabrewercanter@gmail.com</a>
+				</p>
+				<p>
+					LinkedIn:
+					<a
+						href="https://www.linkedin.com/in/lisa-canter-cpmai-pmp-safe-agile-94378b2"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Lisa Canter
+					</a>
+				</p>
+			</section>
+
+			<section>
+				<h2>Typical Topics</h2>
+				<ul>
+					<li>AI privacy and governance assessments</li>
+					<li>ChatGPT or Copilot readiness reviews</li>
+					<li>AI policy and guardrail development</li>
+					<li>Secure AI adoption in regulated environments</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Note</h2>
+				<p>
+					This site is an evolving portfolio and consulting presence for lisAIconsulting. If you are
+					reaching out about a role, advisory conversation, or collaboration, email is the best first
+					step.
+				</p>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main {
+		max-width: 900px;
+		margin: 0 auto;
+		padding: 2rem 1.25rem 4rem;
+	}
+
+	section {
+		margin-bottom: 2.5rem;
+	}
+
+	ul {
+		padding-left: 1.25rem;
+	}
+
+	li {
+		margin-bottom: 0.5rem;
+	}
+</style>
