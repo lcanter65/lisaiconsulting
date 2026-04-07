@@ -1,0 +1,234 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+
+const pageTitle = `Sample Engagement | ${SITE_TITLE}`;
+const pageDescription = 'Sample AI Privacy and Security Assessment output from Lisa AI Consulting.';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={pageTitle} description={pageDescription} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section>
+				<p>Sample Engagement</p>
+				<h1>AI Privacy &amp; Security Assessment</h1>
+				<p>
+					A sample consulting engagement designed to help organizations understand where AI use
+					creates privacy, governance, and operational risk.
+				</p>
+			</section>
+
+			<section>
+				<h2>What This Assessment Covers</h2>
+				<ul>
+					<li>Current AI tools in use across the organization</li>
+					<li>Potential exposure of sensitive or regulated data</li>
+					<li>Governance, permissions, and policy gaps</li>
+					<li>Practical recommendations for safer adoption</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>AI Risk Heatmap</h2>
+				<p>
+					This sample heatmap shows common AI adoption risks by impact and likelihood. It is meant
+					to illustrate the kind of executive-facing artifact clients can use to prioritize action.
+				</p>
+
+				<div class="heatmap-wrapper">
+					<div class="heatmap-grid">
+						<div class="cell low">
+							<h3>Low</h3>
+							<p>General productivity prompting with no sensitive data</p>
+						</div>
+
+						<div class="cell medium">
+							<h3>Moderate</h3>
+							<p>Unclear ownership of AI usage guidance and decision rights</p>
+						</div>
+
+						<div class="cell high">
+							<h3>High</h3>
+							<p>Employees pasting internal business information into public AI tools</p>
+						</div>
+
+						<div class="cell medium">
+							<h3>Moderate</h3>
+							<p>AI outputs used without clear human review or validation</p>
+						</div>
+
+						<div class="cell high">
+							<h3>High</h3>
+							<p>Over-permissioned enterprise AI access to internal repositories</p>
+						</div>
+
+						<div class="cell critical">
+							<h3>Critical</h3>
+							<p>Use of regulated, confidential, or customer data without approved controls</p>
+						</div>
+
+						<div class="cell medium">
+							<h3>Moderate</h3>
+							<p>Shadow AI adoption without inventory, training, or monitoring</p>
+						</div>
+
+						<div class="cell high">
+							<h3>High</h3>
+							<p>Weak retention, logging, or audit visibility for AI interactions</p>
+						</div>
+
+						<div class="cell critical">
+							<h3>Critical</h3>
+							<p>AI-enabled data leakage creating legal, regulatory, or reputational exposure</p>
+						</div>
+					</div>
+
+					<div class="heatmap-labels">
+						<div><strong>Likelihood:</strong> Low → High</div>
+						<div><strong>Impact:</strong> Low → High</div>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h2>Sample Findings</h2>
+				<div class="findings">
+					<article>
+						<h3>1. Unapproved AI Usage</h3>
+						<p>
+							Teams may already be using public AI tools for drafting, analysis, or summarization
+							without approved usage guidance.
+						</p>
+					</article>
+
+					<article>
+						<h3>2. Sensitive Data Exposure Risk</h3>
+						<p>
+							Without clear guardrails, users may paste internal, confidential, or regulated data
+							into tools that are not configured for enterprise privacy requirements.
+						</p>
+					</article>
+
+					<article>
+						<h3>3. Governance Gaps</h3>
+						<p>
+							Many organizations have adoption pressure but no clear model for ownership, policy,
+							training, or exception handling.
+						</p>
+					</article>
+				</div>
+			</section>
+
+			<section>
+				<h2>Typical Deliverables</h2>
+				<ul>
+					<li>Executive summary of top AI privacy and governance risks</li>
+					<li>Risk heatmap and prioritized findings</li>
+					<li>Current-state observations and gap summary</li>
+					<li>Recommended next steps for safer AI adoption</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Interested in a Similar Assessment?</h2>
+				<p>
+					Lisa AI Consulting helps organizations take a practical approach to AI privacy,
+					governance, and secure adoption.
+				</p>
+				<p>
+					<a href="#">Request a consultation</a>
+				</p>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main {
+		max-width: 1000px;
+		margin: 0 auto;
+		padding: 2rem 1.25rem 4rem;
+	}
+
+	section {
+		margin-bottom: 3rem;
+	}
+
+	.heatmap-wrapper {
+		margin-top: 1.5rem;
+	}
+
+	.heatmap-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 12px;
+	}
+
+	.cell {
+		border-radius: 12px;
+		padding: 1rem;
+		min-height: 140px;
+		border: 1px solid #d9d9d9;
+	}
+
+	.cell h3 {
+		margin-top: 0;
+		margin-bottom: 0.5rem;
+	}
+
+	.low {
+		background: #eef7ee;
+	}
+
+	.medium {
+		background: #fff7e8;
+	}
+
+	.high {
+		background: #fff0f0;
+	}
+
+	.critical {
+		background: #fde2e2;
+		border-color: #e2a8a8;
+	}
+
+	.heatmap-labels {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 1rem;
+		font-size: 0.95rem;
+	}
+
+	.findings {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 16px;
+	}
+
+	.findings article {
+		border: 1px solid #d9d9d9;
+		border-radius: 12px;
+		padding: 1rem;
+	}
+
+	@media (max-width: 800px) {
+		.heatmap-grid,
+		.findings {
+			grid-template-columns: 1fr;
+		}
+
+		.heatmap-labels {
+			flex-direction: column;
+			gap: 0.5rem;
+		}
+	}
+</style>
