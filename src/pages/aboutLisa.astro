@@ -1,0 +1,129 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+
+const pageTitle = `About | ${SITE_TITLE}`;
+const pageDescription = 'About Lisa Canter and lisAIconsulting.';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={pageTitle} description={pageDescription} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section>
+				<h1>About Lisa Canter</h1>
+				<p>
+					I am a technology program leader with over 20 years of experience delivering complex
+					enterprise initiatives across healthcare, government, and regulated environments.
+				</p>
+				<p>
+					My work has consistently focused on systems where data sensitivity, compliance, and
+					operational reliability are critical — making AI privacy and governance a natural
+					extension of that experience.
+				</p>
+			</section>
+
+			<section>
+				<h2>Relevant Experience</h2>
+				<ul>
+					<li>
+						<strong>Healthcare IT:</strong> Supported large-scale systems including VA healthcare
+						infrastructure and secure data exchange between organizations.
+					</li>
+					<li>
+						<strong>Medical Device &amp; Compliance:</strong> Led initiatives in regulated environments
+						requiring quality systems, validation, and audit readiness.
+					</li>
+					<li>
+						<strong>Government Technology:</strong> Supported enterprise rollout efforts including
+						state-level adoption of AI tools such as Microsoft Copilot.
+					</li>
+					<li>
+						<strong>Enterprise Program Delivery:</strong> Managed cross-functional programs involving
+						engineering, security, compliance, and business stakeholders.
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Why AI Privacy &amp; Governance</h2>
+				<p>
+					Organizations are moving quickly to adopt AI, often before fully understanding the risks
+					around data exposure, permissions, and governance.
+				</p>
+				<p>
+					I focus on helping teams take a practical approach — enabling AI adoption while maintaining
+					control over sensitive data and aligning with existing compliance expectations.
+				</p>
+				<p>
+					This includes evaluating how tools like ChatGPT, Copilot, and enterprise LLM platforms are
+					used in real workflows, not just how they are configured.
+				</p>
+			</section>
+
+			<section>
+				<h2>Approach</h2>
+				<ul>
+					<li>Start with how AI is actually being used today</li>
+					<li>Identify real exposure risks (not theoretical ones)</li>
+					<li>Prioritize actions that are practical and implementable</li>
+					<li>Communicate clearly with both technical and business stakeholders</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>About lisAIconsulting</h2>
+				<p>
+					lisAIconsulting was created to help organizations bridge the gap between rapid AI adoption
+					and responsible, secure implementation.
+				</p>
+				<p>
+					The focus is on practical guidance — not just policy — so teams can move forward with AI
+					confidently.
+				</p>
+			</section>
+
+			<section>
+				<h2>Connect</h2>
+				<p>
+					For consulting inquiries or collaboration:
+				</p>
+				<p>
+					<a href="#">Contact</a> |
+					<a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+				</p>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main {
+		max-width: 900px;
+		margin: 0 auto;
+		padding: 2rem 1.25rem 4rem;
+	}
+
+	section {
+		margin-bottom: 2.5rem;
+	}
+
+	h1 {
+		margin-bottom: 1rem;
+	}
+
+	ul {
+		padding-left: 1.25rem;
+	}
+
+	li {
+		margin-bottom: 0.5rem;
+	}
+</style>
