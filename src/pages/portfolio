@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | lisAIconsulting</title>
+  <meta
+    name="description"
+    content="Portfolio examples from lisAIconsulting, including practical AI and automation work."
+  />
+</head>
+<body>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Portfolio</p>
+        <h1>Selected Examples of Delivery and Automation Work</h1>
+        <p class="lead">
+          This page highlights practical examples of work that combine program delivery,
+          process improvement, and automation. These samples are intended to show how
+          structured execution and lightweight tooling can improve visibility, reduce
+          manual effort, and support scalable business operations.
+        </p>
+      </div>
+    </section>
+
+    <section class="portfolio-item">
+      <div class="container">
+        <h2>Defect Tracking Automation (n8n)</h2>
+        <p>
+          A lightweight workflow automation designed to improve how teams capture,
+          organize, and track defects using a structured intake process and centralized log.
+        </p>
+
+        <div class="portfolio-summary">
+          <div class="summary-card">
+            <h3>Problem</h3>
+            <p>
+              Teams often rely on scattered emails, chat messages, or manual spreadsheets
+              to report and track defects, creating inconsistent intake and limited visibility.
+            </p>
+          </div>
+
+          <div class="summary-card">
+            <h3>Solution</h3>
+            <p>
+              Built an automated defect intake and tracking workflow using n8n, connected
+              to a form-based submission process and Google Sheets for centralized logging.
+            </p>
+          </div>
+
+          <div class="summary-card">
+            <h3>Outcome</h3>
+            <p>
+              Created a more consistent and trackable process that improves visibility,
+              reduces manual handling, and supports better follow-through on issue management.
+            </p>
+          </div>
+        </div>
+
+        <div class="portfolio-section">
+          <h3>Workflow Overview</h3>
+          <p>
+            The workflow begins with a defect submission, routes through n8n for handling
+            and formatting, and records the issue in a centralized tracker for review and follow-up.
+          </p>
+
+          <div class="workflow-diagram">
+            <div class="workflow-step">User submits defect form</div>
+            <div class="workflow-arrow">↓</div>
+            <div class="workflow-step">n8n workflow triggered</div>
+            <div class="workflow-arrow">↓</div>
+            <div class="workflow-step">Data validation and formatting</div>
+            <div class="workflow-arrow">↓</div>
+            <div class="workflow-step">Defect logged to Google Sheet</div>
+            <div class="workflow-arrow">↓</div>
+            <div class="workflow-step">Team visibility and follow-up</div>
+          </div>
+        </div>
+
+        <div class="portfolio-section">
+          <h3>Sample Screens</h3>
+          <p>
+            These visuals show the structure of the workflow and the output used for tracking.
+          </p>
+
+          <div class="image-grid">
+            <figure class="image-card">
+              <img src="/images/portfolio/defect-tracker-workflow.png" alt="n8n defect tracking workflow" />
+              <figcaption>n8n workflow</figcaption>
+            </figure>
+
+            <figure class="image-card">
+              <img src="/images/portfolio/defect-tracker-form.png" alt="Defect intake form" />
+              <figcaption>Defect intake form</figcaption>
+            </figure>
+
+            <figure class="image-card">
+              <img src="/images/portfolio/defect-tracker-sheet.png" alt="Google Sheet defect tracker output" />
+              <figcaption>Centralized defect tracker</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="portfolio-section">
+          <h3>What This Example Demonstrates</h3>
+          <ul>
+            <li>Practical workflow design for operational process improvement</li>
+            <li>Use of lightweight automation tools to reduce manual effort</li>
+            <li>Clear intake and tracking structure for better visibility</li>
+            <li>Ability to connect business need, process flow, and working output</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio-cta">
+      <div class="container">
+        <h2>Interested in Similar Work?</h2>
+        <p>
+          lisAIconsulting supports organizations that need practical help with AI programs,
+          automation opportunities, governance, and delivery execution.
+        </p>
+        <a class="button" href="/contact">Contact Me</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
