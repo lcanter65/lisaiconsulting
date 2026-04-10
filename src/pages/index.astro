@@ -1,110 +1,117 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
-<Layout title="Portfolio | lisAIconsulting">
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section>
+  <h1>AI Program Delivery, Governance, and Secure Adoption for Enterprise Systems</h1>
 
-  <section class="page-section">
-    <div class="container narrow">
-      <p class="eyebrow">Portfolio</p>
-      <h1>Selected Work</h1>
-      <p class="intro">
-        This page highlights practical examples of delivery, automation, and structured execution.
-        The goal is to show how business needs can be translated into clear workflows,
-        working artifacts, and measurable operational improvement.
-      </p>
-    </div>
-  </section>
+  <p>
+    Organizations are rapidly adopting AI tools such as ChatGPT and Microsoft Copilot, often without clear ownership, governance, or execution structure.
+  </p>
 
-  <section class="page-section section-soft">
-    <div class="container">
-      <div class="portfolio-item">
+  <p>
+    lisAIconsulting helps enterprise teams not only assess AI risk, but 
+    <b>plan, govern, and execute AI adoption initiatives across business and technology organizations.</b>
+  </p>
 
-        <div class="portfolio-header">
-          <h2>Defect Tracking Automation (n8n)</h2>
-          <span class="tag">Workflow Automation</span>
-        </div>
+  <div class="cta-container">
+    <a href="/contact" class="cta-primary">Request an AI Risk Assessment</a>
+    <a href="/contact" class="cta-secondary">Discuss a Program Role or AI Initiative</a>
+  </div>
+</section>
 
-        <p class="item-summary">
-          A lightweight workflow automation designed to improve how teams capture,
-          organize, and track defects using structured intake and centralized logging.
-        </p>
+			<section id="services">
+				<h2>Services</h2>
+<h3>AI Program &amp; Delivery Leadership</h3>
+<ul>
+  <li>Lead cross-functional AI initiatives from planning through execution</li>
+  <li>Coordinate business, engineering, security, and compliance stakeholders</li>
+  <li>Manage dependencies, risks, and delivery timelines</li>
+  <li>Establish governance and operating models aligned to execution</li>
+</ul>
 
-        <div class="summary-grid">
-          <div class="info-card">
-            <h3>Problem</h3>
-            <p>
-              Teams rely on scattered communication and manual tracking, resulting in inconsistent intake and limited visibility.
-            </p>
-          </div>
+				<h3>AI Privacy &amp; Risk Assessment</h3>
+				<p>
+					Identify where sensitive data may be exposed across AI tools, internal workflows, and
+					user practices. Assess current-state risk and provide prioritized recommendations.
+				</p>
 
-          <div class="info-card">
-            <h3>Solution</h3>
-            <p>
-              Built an automated intake workflow using n8n integrated with a form and Google Sheets for centralized tracking.
-            </p>
-          </div>
+				<h3>GPT &amp; Copilot Readiness Review</h3>
+				<p>
+					Evaluate whether your organization is ready to deploy AI tools responsibly, including
+					permissions, data access, governance, and usage patterns.
+				</p>
 
-          <div class="info-card">
-            <h3>Outcome</h3>
-            <p>
-              Improved visibility, reduced manual effort, and created a consistent defect tracking process.
-            </p>
-          </div>
-        </div>
+				<h3>AI Governance &amp; Secure Adoption Advisory</h3>
+				<p>
+					Define practical policies, guardrails, and operating models that support AI adoption while
+					maintaining privacy, compliance, and business control.
+				</p>
+			</section>
 
-        <div class="two-column">
-          <div class="content-block">
-            <h3>Workflow Overview</h3>
+			<section>
+				<h2>Why lisAIconsulting</h2>
+				<p>
+					Lisa Canter brings more than 20 years of experience leading enterprise technology programs
+					across regulated and high-accountability environments.
+				</p>
+				<ul>
+					<li>Healthcare IT and secure data exchange</li>
+					<li>Medical device and quality/compliance environments</li>
+					<li>State government AI rollout and enterprise enablement</li>
+					<li>Cross-functional program delivery across business and technical teams</li>
+				</ul>
+			</section>
 
-            <div class="workflow-box">
-              <div class="workflow-step">User submits form</div>
-              <div class="workflow-arrow">↓</div>
-              <div class="workflow-step">n8n workflow triggered</div>
-              <div class="workflow-arrow">↓</div>
-              <div class="workflow-step">Data processed</div>
-              <div class="workflow-arrow">↓</div>
-              <div class="workflow-step">Logged to Google Sheet</div>
-              <div class="workflow-arrow">↓</div>
-              <div class="workflow-step">Team visibility</div>
-            </div>
-          </div>
+			<section>
+				<h2>Sample Engagement</h2>
+				<h3>AI Privacy &amp; Security Assessment</h3>
+				<p>
+					A focused assessment designed to help organizations understand where AI usage creates
+					privacy, data handling, and governance risk.
+				</p>
+				<ul>
+					<li>Review current AI tools and usage scenarios</li>
+					<li>Identify sensitive data exposure risks</li>
+					<li>Assess governance and control gaps</li>
+					<li>Deliver a prioritized risk summary and recommendations</li>
+				</ul>
+				<p>
+					<a href="/demo">View Sample Output</a>
+				</p>
+			</section>
 
-          <div class="content-block">
-            <h3>What This Demonstrates</h3>
-            <ul class="clean-list">
-              <li>Workflow automation design</li>
-              <li>Process improvement</li>
-              <li>Centralized tracking</li>
-              <li>Business-to-technical translation</li>
-              <li>Deliverable-focused execution</li>
-            </ul>
-          </div>
-        </div>
+			<section>
+				<h2>Who This Helps</h2>
+				<ul>
+					<li>Healthcare organizations evaluating AI use with sensitive data</li>
+					<li>Government teams balancing innovation with policy and control</li>
+					<li>Enterprise leaders seeking safer AI adoption and clearer guardrails</li>
+				</ul>
+			</section>
 
-        <div class="content-block">
-          <h3>Sample Screens</h3>
-
-          <div class="image-grid">
-            <figure class="image-card">
-              <img src="/images/portfolio/workflow.png" alt="workflow" />
-              <figcaption>n8n workflow</figcaption>
-            </figure>
-
-            <figure class="image-card">
-              <img src="/images/portfolio/form.png" alt="form" />
-              <figcaption>Defect intake form</figcaption>
-            </figure>
-
-            <figure class="image-card">
-              <img src="/images/portfolio/sheet.png" alt="sheet" />
-              <figcaption>Tracking output</figcaption>
-            </figure>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-</Layout>
+			<section>
+				<h2>Start with a Practical Risk Review</h2>
+				<p>
+					If your organization is using AI tools and needs a clearer view of privacy, governance,
+					and adoption risk, lisAIconsulting can help.
+				</p>
+				<p>
+					<a href="/contact">Schedule a Consultation</a>
+				</p>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
