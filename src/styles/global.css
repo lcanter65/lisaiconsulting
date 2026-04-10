@@ -161,9 +161,7 @@ textarea:focus-visible {
 
 /* Button-style links */
 a.button,
-.button,
-main a[href="/contact"],
-main a[href="/demo"] {
+.button {
 	display: inline-block;
 	background: var(--accent);
 	color: #fff;
@@ -179,13 +177,61 @@ main a[href="/demo"] {
 }
 
 a.button:hover,
-.button:hover,
-main a[href="/contact"]:hover,
-main a[href="/demo"]:hover {
+.button:hover {
 	background: var(--accent-dark);
 	color: #fff;
 	transform: translateY(-1px);
 	box-shadow: 0 8px 18px rgba(20, 24, 33, 0.1);
+}
+
+/* CTA group for homepage hero */
+.cta-container {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-top: 1.25rem;
+}
+
+.cta-primary,
+.cta-secondary {
+	display: inline-block;
+	padding: 0.75rem 1.1rem;
+	border-radius: 8px;
+	font-weight: 700;
+	text-decoration: none;
+	transition:
+		background 0.2s ease,
+		color 0.2s ease,
+		transform 0.15s ease,
+		box-shadow 0.2s ease,
+		border-color 0.2s ease;
+}
+
+.cta-primary {
+	background: var(--accent);
+	color: #fff;
+	box-shadow: 0 1px 2px rgba(20, 24, 33, 0.08);
+}
+
+.cta-primary:hover {
+	background: var(--accent-dark);
+	color: #fff;
+	transform: translateY(-1px);
+	box-shadow: 0 8px 18px rgba(20, 24, 33, 0.1);
+}
+
+.cta-secondary {
+	background: transparent;
+	color: var(--accent);
+	border: 2px solid var(--accent);
+}
+
+.cta-secondary:hover {
+	background: var(--accent-soft);
+	color: var(--accent-dark);
+	border-color: var(--accent-dark);
+	transform: translateY(-1px);
 }
 
 textarea,
@@ -355,6 +401,15 @@ footer {
 	}
 
 	h2 {
-		font-size: 1.7rem;
+		font-size: 1.7rem;	
+	}
+		.cta-container {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.cta-primary,
+	.cta-secondary {
+		text-align: center;
 	}
 }
