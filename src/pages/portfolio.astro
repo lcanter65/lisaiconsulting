@@ -7,28 +7,25 @@ const pageTitle = 'Portfolio | lisAIconsulting';
 const pageDescription =
   'Selected examples of AI-enabled workflow design, automation, and business process improvement.';
 
-const gptImages = [
+const n8nImages = [
   {
-    src: '/images/portfolio/gpt-1-messy-request.png',
-    alt: 'Initial user request asking for an easy way to clean up email.',
-    caption: '1. Initial request: a vague business problem stated in natural language.',
+    src: '/images/portfolio/n8n-1-workflow-overview.png',
+    alt: 'n8n workflow overview showing the defect intake automation flow.',
+    caption: 'Workflow overview: the automation captures intake details and routes them into a structured tracking flow.',
   },
   {
-    src: '/images/portfolio/gpt-2-clarifying-questions.png',
-    alt: 'GPT asking structured clarifying questions about email platform, goals, and constraints.',
-    caption: '2. Clarifying questions: the GPT gathers missing information before proposing a path forward.',
+    src: '/images/portfolio/n8n-2-form-example.png',
+    alt: 'Example of the intake form used to capture defect details.',
+    caption: 'Structured intake: the form standardizes what is captured at the start of the process.',
   },
   {
-    src: '/images/portfolio/gpt-3-user-answers.png',
-    alt: 'User responses describing Gmail, inbox volume, ongoing maintenance needs, and preference for automation.',
-    caption: '3. Context capture: constraints, scale, and preferences are gathered in a lightweight intake flow.',
-  },
-  {
-    src: '/images/portfolio/gpt-4-structured-output.png',
-    alt: 'Structured request summary with business need, impact, urgency, dependencies, risks, and next step.',
-    caption: '4. Structured output: the GPT converts an unstructured request into a decision-ready summary.',
+    src: '/images/portfolio/n8n-3-sheet-output.png',
+    alt: 'Google Sheet output populated by the n8n workflow.',
+    caption: 'Operational output: submissions are appended into a shared tracking structure for visibility and follow-up.',
   },
 ];
+
+const gptImages = [$1];
 ---
 
 <html lang="en">
@@ -49,6 +46,14 @@ const gptImages = [
       </section>
 
       <section class="portfolio-grid" aria-label="Portfolio examples">
+        <div class="section-intro">
+          <h2>Selected work</h2>
+          <p>
+            Two examples are shown below: one focused on workflow automation and one focused on
+            structured AI-assisted intake. Together they show how I approach process design,
+            operational clarity, and practical execution.
+          </p>
+        </div>
         <article class="case-study">
           <div class="case-header">
             <p class="case-kicker">Example 1</p>
@@ -89,6 +94,24 @@ const gptImages = [
             <strong>What it demonstrates:</strong>
             translating a manual business process into a lightweight automation with clearer intake,
             better visibility, and repeatable execution.
+          </div>
+
+          <div class="demo-block">
+            <h3>Demo walkthrough</h3>
+            <p>
+              This example shows a simple intake-to-tracking flow: information is captured in a
+              consistent format, routed through n8n, and recorded in a shared structure that
+              supports triage and follow-up.
+            </p>
+
+            <div class="image-grid image-grid-three">
+              {n8nImages.map((image) => (
+                <figure class="image-card">
+                  <img src={image.src} alt={image.alt} loading="lazy" />
+                  <figcaption>{image.caption}</figcaption>
+                </figure>
+              ))}
+            </div>
           </div>
         </article>
 
@@ -223,8 +246,24 @@ const gptImages = [
 
   .portfolio-grid {
     display: grid;
-    gap: 2rem;
+    gap: 1.5rem;
     margin-top: 2.5rem;
+  }
+
+  .section-intro {
+    margin-bottom: 0.25rem;
+  }
+
+  .section-intro h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .section-intro p {
+    margin: 0;
+    max-width: 760px;
+    line-height: 1.7;
+    color: var(--muted);
   }
 
   .case-study,
@@ -301,6 +340,10 @@ const gptImages = [
     margin-top: 1rem;
   }
 
+  .image-grid-three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .image-card {
     margin: 0;
     background: var(--surface-soft);
@@ -326,7 +369,8 @@ const gptImages = [
 
   @media (max-width: 900px) {
     .detail-grid,
-    .image-grid {
+    .image-grid,
+    .image-grid-three {
       grid-template-columns: 1fr;
     }
   }
