@@ -1,190 +1,333 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const pageTitle = 'Portfolio | lisAIconsulting';
+const pageDescription =
+  'Selected examples of AI-enabled workflow design, automation, and business process improvement.';
+
+const gptImages = [
+  {
+    src: '/images/portfolio/gpt-1-messy-request.png',
+    alt: 'Initial user request asking for an easy way to clean up email.',
+    caption: '1. Initial request: a vague business problem stated in natural language.',
+  },
+  {
+    src: '/images/portfolio/gpt-2-clarifying-questions.png',
+    alt: 'GPT asking structured clarifying questions about email platform, goals, and constraints.',
+    caption: '2. Clarifying questions: the GPT gathers missing information before proposing a path forward.',
+  },
+  {
+    src: '/images/portfolio/gpt-3-user-answers.png',
+    alt: 'User responses describing Gmail, inbox volume, ongoing maintenance needs, and preference for automation.',
+    caption: '3. Context capture: constraints, scale, and preferences are gathered in a lightweight intake flow.',
+  },
+  {
+    src: '/images/portfolio/gpt-4-structured-output.png',
+    alt: 'Structured request summary with business need, impact, urgency, dependencies, risks, and next step.',
+    caption: '4. Structured output: the GPT converts an unstructured request into a decision-ready summary.',
+  },
+];
 ---
 
-<Layout title="Portfolio | lisAIconsulting">
-
-  <section class="page-intro">
-    <p class="eyebrow">Portfolio</p>
-    <h1>Selected Work</h1>
-    <p class="intro">
-      This page highlights practical examples of delivery, automation, and structured execution.
-      The focus is on showing how operational problems can be translated into working solutions
-      that improve visibility, consistency, and follow-through.
-    </p>
-  </section>
-
-  <section class="portfolio-item">
-    <div class="portfolio-header">
-      <div>
-        <p class="item-label">Featured Example</p>
-        <h2>Defect Tracking Automation (n8n)</h2>
-      </div>
-      <span class="tag">Workflow Automation</span>
-    </div>
-
-    <p class="item-summary">
-      This example demonstrates how a common operational problem—unstructured defect intake and inconsistent tracking—
-      can be improved through lightweight automation, clearer process flow, and centralized visibility.
-    </p>
-
-    <div class="summary-grid">
-      <div class="info-card">
-        <h3>Problem</h3>
-        <p>
-          Teams often capture defects through scattered channels such as email, chat, or informal notes.
-          That creates inconsistent intake, incomplete information, and limited visibility into what has
-          been reported, reviewed, or resolved.
+<html lang="en">
+  <head>
+    <BaseHead title={pageTitle} description={pageDescription} />
+  </head>
+  <body>
+    <Header />
+    <main class="portfolio-page">
+      <section class="hero">
+        <p class="eyebrow">Portfolio</p>
+        <h1>Examples of practical AI, automation, and workflow design</h1>
+        <p class="intro">
+          These examples reflect the kind of work I can design and deliver: structured intake,
+          process improvement, and lightweight automation that solve real business problems
+          without adding unnecessary complexity.
         </p>
-      </div>
+      </section>
 
-      <div class="info-card">
-        <h3>Solution</h3>
+      <section class="portfolio-grid" aria-label="Portfolio examples">
+        <article class="case-study">
+          <div class="case-header">
+            <p class="case-kicker">Example 1</p>
+            <h2>n8n Defect Intake & Tracking Automation</h2>
+          </div>
+
+          <p>
+            This workflow demonstrates how manual intake can be streamlined into a more consistent,
+            auditable process. A form submission captures defect information, routes it through a
+            structured workflow, and appends the result to a Google Sheet for tracking and follow-up.
+          </p>
+
+          <div class="detail-grid">
+            <div>
+              <h3>Business problem</h3>
+              <p>
+                Defect reporting is often inconsistent, incomplete, and difficult to track across
+                teams. This creates rework, slows triage, and reduces visibility into priorities.
+              </p>
+            </div>
+            <div>
+              <h3>Approach</h3>
+              <p>
+                Designed an n8n workflow that standardizes intake, captures key issue details, and
+                pushes the result into a shared tracking structure that supports triage and reporting.
+              </p>
+            </div>
+            <div>
+              <h3>Value</h3>
+              <p>
+                Improves consistency, reduces manual handoffs, and creates a cleaner operational
+                record for defect management.
+              </p>
+            </div>
+          </div>
+
+          <div class="callout">
+            <strong>What it demonstrates:</strong>
+            translating a manual business process into a lightweight automation with clearer intake,
+            better visibility, and repeatable execution.
+          </div>
+        </article>
+
+        <article class="case-study">
+          <div class="case-header">
+            <p class="case-kicker">Example 2</p>
+            <h2>Business Intake & Prioritization GPT</h2>
+          </div>
+
+          <p>
+            This example shows how a custom GPT can be used as a business-facing intake assistant.
+            Rather than jumping directly to a solution, it asks targeted follow-up questions,
+            identifies missing information, and produces a structured summary that supports faster
+            triage and clearer decision-making.
+          </p>
+
+          <div class="detail-grid">
+            <div>
+              <h3>Business problem</h3>
+              <p>
+                Teams often submit requests that are incomplete, vague, or missing context such as
+                urgency, impact, owner, or dependencies. That leads to back-and-forth, poor intake
+                quality, and slower prioritization.
+              </p>
+            </div>
+            <div>
+              <h3>Approach</h3>
+              <p>
+                Designed a GPT to behave like a business intake analyst: ask concise clarifying
+                questions first, then generate a structured request summary with business need,
+                impact, urgency, constraints, and recommended next step.
+              </p>
+            </div>
+            <div>
+              <h3>Value</h3>
+              <p>
+                Converts unstructured requests into decision-ready inputs, improving intake quality
+                while reducing clarification cycles and operational friction.
+              </p>
+            </div>
+          </div>
+
+          <div class="callout">
+            <strong>What it demonstrates:</strong>
+            designing AI-assisted workflows that support business process improvement rather than
+            novelty. The focus is on structure, clarity, and usable output.
+          </div>
+
+          <div class="demo-block">
+            <h3>Demo walkthrough</h3>
+            <p>
+              In this example, a vague request about email cleanup is transformed into a structured
+              summary with business need, impact, urgency, risks, and next step. The screenshots
+              below show the progression from raw request to organized output.
+            </p>
+
+            <div class="image-grid">
+              {gptImages.map((image) => (
+                <figure class="image-card">
+                  <img src={image.src} alt={image.alt} loading="lazy" />
+                  <figcaption>{image.caption}</figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="closing">
+        <h2>How I approach this work</h2>
         <p>
-          I built an automated defect intake and tracking workflow using n8n, with structured submission,
-          standardized handling, and centralized logging into Google Sheets. The design focuses on making
-          issue reporting more consistent while reducing manual coordination effort.
-        </p>
-      </div>
-
-      <div class="info-card">
-        <h3>Outcome</h3>
-        <p>
-          The result is a cleaner, more traceable process that improves visibility, supports follow-through,
-          and gives teams a lightweight way to move from ad hoc reporting to a more structured operating model.
-        </p>
-      </div>
-    </div>
-
-    <div class="two-column">
-      <div class="content-block">
-        <h3>Business Context</h3>
-        <p>
-          Defect management breaks down quickly when intake is informal and tracking is inconsistent.
-          Even simple workflows benefit from structure: a clear point of entry, standardized fields,
-          and a shared location for review and follow-up.
+          I focus on business-ready solutions: clarify the problem, define the workflow, reduce
+          friction, and use the right level of automation to improve execution. In some cases that
+          means a simple automation. In others, it means designing a structured AI interaction that
+          helps teams intake and organize work more effectively.
         </p>
         <p>
-          This example was created to demonstrate that practical process improvement does not always require
-          a large platform implementation. In many cases, the right combination of workflow logic, intake
-          design, and centralized tracking can significantly improve operational discipline.
+          If your team needs help shaping a workflow, improving intake, or turning a manual process
+          into a more consistent operating model, I’d be glad to discuss it.
         </p>
-      </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
 
-      <div class="content-block">
-        <h3>What This Demonstrates</h3>
-        <ul class="clean-list">
-          <li>Translation of an operational problem into a working solution</li>
-          <li>Workflow automation design using lightweight tooling</li>
-          <li>Improved intake structure and centralized visibility</li>
-          <li>Connection between business need, process flow, and output</li>
-          <li>Ability to package technical work into a client-facing artifact</li>
-        </ul>
-      </div>
-    </div>
+<style>
+  :root {
+    --page-max: 1120px;
+    --text: #1f2937;
+    --muted: #5b6472;
+    --surface: #ffffff;
+    --surface-soft: #f7f9fc;
+    --border: #d9e2ec;
+    --accent-soft: #eef4ff;
+  }
 
-    <div class="content-block">
-      <h3>Workflow Overview</h3>
-      <p>
-        The workflow starts with defect submission through a structured form, triggers automated handling in n8n,
-        and records the issue in a centralized tracking sheet. This creates a more reliable intake path and a
-        shared source of truth for review and follow-up.
-      </p>
+  .portfolio-page {
+    width: min(calc(100% - 2rem), var(--page-max));
+    margin: 0 auto;
+    padding: 2rem 0 4rem;
+    color: var(--text);
+  }
 
-      <div class="workflow-box">
-        <div class="workflow-step">User submits defect form</div>
-        <div class="workflow-arrow">↓</div>
-        <div class="workflow-step">n8n workflow triggered</div>
-        <div class="workflow-arrow">↓</div>
-        <div class="workflow-step">Submission data validated and formatted</div>
-        <div class="workflow-arrow">↓</div>
-        <div class="workflow-step">Defect logged to centralized tracker</div>
-        <div class="workflow-arrow">↓</div>
-        <div class="workflow-step">Team visibility and follow-up</div>
-      </div>
-    </div>
+  .hero {
+    padding: 1.5rem 0 2.5rem;
+    border-bottom: 1px solid var(--border);
+  }
 
-    <div class="content-block">
-      <h3>Sample Screens</h3>
-      <p>
-        The screenshots below show the working flow, intake structure, and tracking output used to support
-        a more consistent defect management process.
-      </p>
+  .eyebrow,
+  .case-kicker {
+    margin: 0 0 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
 
-      <div class="image-grid">
-        <figure class="image-card">
-          <img src="/images/portfolio/workflow.png" alt="n8n defect tracking workflow" />
-          <figcaption>n8n workflow automation</figcaption>
-        </figure>
+  h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+  }
 
-        <figure class="image-card">
-          <img src="/images/portfolio/form.png" alt="Structured defect intake form" />
-          <figcaption>Structured defect intake form</figcaption>
-        </figure>
+  .intro {
+    max-width: 760px;
+    font-size: 1.08rem;
+    line-height: 1.7;
+    color: var(--muted);
+  }
 
-        <figure class="image-card">
-          <img src="/images/portfolio/sheet.png" alt="Centralized defect tracking output" />
-          <figcaption>Centralized tracking output</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
+  .portfolio-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
 
-  <section class="cta-section">
-    <h2>Interested in Similar Work?</h2>
-    <p>
-      lisAIconsulting supports organizations that need practical help with AI programs,
-      workflow improvement, automation opportunities, and delivery execution.
-    </p>
-    <a class="button" href="/contact">Contact Me</a>
-  </section>
-  <style>
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-    }
+  .case-study,
+  .closing {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.75rem;
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
+  }
 
-    h1 {
-      margin-bottom: 0.5rem;
-    }
+  .case-header h2,
+  .closing h2 {
+    margin: 0;
+    font-size: 1.7rem;
+    line-height: 1.25;
+  }
 
-    p {
-      margin-bottom: 2rem;
-      color: #555;
-    }
+  .case-study > p,
+  .closing p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--muted);
+  }
 
+  .detail-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .detail-grid div {
+    background: var(--surface-soft);
+    border-radius: 12px;
+    padding: 1rem;
+    border: 1px solid var(--border);
+  }
+
+  .detail-grid h3,
+  .demo-block h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.02rem;
+  }
+
+  .detail-grid p,
+  .demo-block p,
+  figcaption {
+    margin: 0;
+    font-size: 0.97rem;
+    line-height: 1.65;
+    color: var(--muted);
+  }
+
+  .callout {
+    margin-top: 1rem;
+    padding: 1rem 1.1rem;
+    background: var(--accent-soft);
+    border-left: 4px solid var(--accent);
+    border-radius: 12px;
+    line-height: 1.65;
+  }
+
+  .demo-block {
+    margin-top: 1.75rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .image-card {
+    margin: 0;
+    background: var(--surface-soft);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .image-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #fff;
+  }
+
+  .image-card figcaption {
+    padding: 0.9rem 1rem 1rem;
+  }
+
+  .closing {
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 900px) {
+    .detail-grid,
     .image-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: 1fr;
     }
-
-    .image-card {
-      border: 1px solid #eee;
-      border-radius: 10px;
-      overflow: hidden;
-      background: #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .image-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    }
-
-    .image-card img {
-      width: 100%;
-      display: block;
-    }
-
-    .image-card figcaption {
-      padding: 0.75rem;
-      font-size: 0.9rem;
-      color: #333;
-      text-align: center;
-    }
-  </style>
-
-</Layout>
+  }
+</style>
