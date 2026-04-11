@@ -4,32 +4,140 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Portfolio | lisAIconsulting">
 
-  <section class="container">
+  <section class="page-intro">
+    <p class="eyebrow">Portfolio</p>
     <h1>Selected Work</h1>
-    <p>
-      Examples of automation, workflow design, and practical AI-enabled solutions.
+    <p class="intro">
+      This page highlights practical examples of delivery, automation, and structured execution.
+      The focus is on showing how operational problems can be translated into working solutions
+      that improve visibility, consistency, and follow-through.
+    </p>
+  </section>
+
+  <section class="portfolio-item">
+    <div class="portfolio-header">
+      <div>
+        <p class="item-label">Featured Example</p>
+        <h2>Defect Tracking Automation (n8n)</h2>
+      </div>
+      <span class="tag">Workflow Automation</span>
+    </div>
+
+    <p class="item-summary">
+      This example demonstrates how a common operational problem—unstructured defect intake and inconsistent tracking—
+      can be improved through lightweight automation, clearer process flow, and centralized visibility.
     </p>
 
-    <div class="image-grid">
-      
-      <figure class="image-card">
-        <img src="/images/portfolio/workflow.png" alt="n8n workflow" />
-        <figcaption>n8n workflow</figcaption>
-      </figure>
+    <div class="summary-grid">
+      <div class="info-card">
+        <h3>Problem</h3>
+        <p>
+          Teams often capture defects through scattered channels such as email, chat, or informal notes.
+          That creates inconsistent intake, incomplete information, and limited visibility into what has
+          been reported, reviewed, or resolved.
+        </p>
+      </div>
 
-      <figure class="image-card">
-        <img src="/images/portfolio/form.png" alt="Defect intake form" />
-        <figcaption>Defect intake form</figcaption>
-      </figure>
+      <div class="info-card">
+        <h3>Solution</h3>
+        <p>
+          I built an automated defect intake and tracking workflow using n8n, with structured submission,
+          standardized handling, and centralized logging into Google Sheets. The design focuses on making
+          issue reporting more consistent while reducing manual coordination effort.
+        </p>
+      </div>
 
-      <figure class="image-card">
-        <img src="/images/portfolio/sheet.png" alt="Tracking output" />
-        <figcaption>Tracking output</figcaption>
-      </figure>
+      <div class="info-card">
+        <h3>Outcome</h3>
+        <p>
+          The result is a cleaner, more traceable process that improves visibility, supports follow-through,
+          and gives teams a lightweight way to move from ad hoc reporting to a more structured operating model.
+        </p>
+      </div>
+    </div>
 
+    <div class="two-column">
+      <div class="content-block">
+        <h3>Business Context</h3>
+        <p>
+          Defect management breaks down quickly when intake is informal and tracking is inconsistent.
+          Even simple workflows benefit from structure: a clear point of entry, standardized fields,
+          and a shared location for review and follow-up.
+        </p>
+        <p>
+          This example was created to demonstrate that practical process improvement does not always require
+          a large platform implementation. In many cases, the right combination of workflow logic, intake
+          design, and centralized tracking can significantly improve operational discipline.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>What This Demonstrates</h3>
+        <ul class="clean-list">
+          <li>Translation of an operational problem into a working solution</li>
+          <li>Workflow automation design using lightweight tooling</li>
+          <li>Improved intake structure and centralized visibility</li>
+          <li>Connection between business need, process flow, and output</li>
+          <li>Ability to package technical work into a client-facing artifact</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content-block">
+      <h3>Workflow Overview</h3>
+      <p>
+        The workflow starts with defect submission through a structured form, triggers automated handling in n8n,
+        and records the issue in a centralized tracking sheet. This creates a more reliable intake path and a
+        shared source of truth for review and follow-up.
+      </p>
+
+      <div class="workflow-box">
+        <div class="workflow-step">User submits defect form</div>
+        <div class="workflow-arrow">↓</div>
+        <div class="workflow-step">n8n workflow triggered</div>
+        <div class="workflow-arrow">↓</div>
+        <div class="workflow-step">Submission data validated and formatted</div>
+        <div class="workflow-arrow">↓</div>
+        <div class="workflow-step">Defect logged to centralized tracker</div>
+        <div class="workflow-arrow">↓</div>
+        <div class="workflow-step">Team visibility and follow-up</div>
+      </div>
+    </div>
+
+    <div class="content-block">
+      <h3>Sample Screens</h3>
+      <p>
+        The screenshots below show the working flow, intake structure, and tracking output used to support
+        a more consistent defect management process.
+      </p>
+
+      <div class="image-grid">
+        <figure class="image-card">
+          <img src="/images/portfolio/workflow.png" alt="n8n defect tracking workflow" />
+          <figcaption>n8n workflow automation</figcaption>
+        </figure>
+
+        <figure class="image-card">
+          <img src="/images/portfolio/form.png" alt="Structured defect intake form" />
+          <figcaption>Structured defect intake form</figcaption>
+        </figure>
+
+        <figure class="image-card">
+          <img src="/images/portfolio/sheet.png" alt="Centralized defect tracking output" />
+          <figcaption>Centralized tracking output</figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
+  <section class="cta-section">
+    <h2>Interested in Similar Work?</h2>
+    <p>
+      lisAIconsulting supports organizations that need practical help with AI programs,
+      workflow improvement, automation opportunities, and delivery execution.
+    </p>
+    <a class="button" href="/contact">Contact Me</a>
+  </section>
   <style>
     .container {
       max-width: 900px;
