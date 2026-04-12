@@ -9,23 +9,51 @@ const pageDescription =
 
 const n8nImages = [
   {
-    src: '/images/portfolio/n8n-1-workflow-overview.png',
-    alt: 'n8n workflow overview showing the defect intake automation flow.',
-    caption: 'Workflow overview: the automation captures intake details and routes them into a structured tracking flow.',
+    src: '/images/portfolio/form.png',
+    alt: 'Defect intake form used to capture issue details.',
+    caption:
+      'Step 1 — Intake form: structured capture of defect details to ensure consistent inputs.',
   },
   {
-    src: '/images/portfolio/n8n-2-form-example.png',
-    alt: 'Example of the intake form used to capture defect details.',
-    caption: 'Structured intake: the form standardizes what is captured at the start of the process.',
+    src: '/images/portfolio/workflow.png',
+    alt: 'n8n workflow showing automation process.',
+    caption:
+      'Step 2 — Workflow automation: n8n processes and routes the intake into a structured flow.',
   },
   {
-    src: '/images/portfolio/n8n-3-sheet-output.png',
-    alt: 'Google Sheet output populated by the n8n workflow.',
-    caption: 'Operational output: submissions are appended into a shared tracking structure for visibility and follow-up.',
+    src: '/images/portfolio/sheet.png',
+    alt: 'Google Sheet output for tracking.',
+    caption:
+      'Step 3 — Shared tracking: submissions are recorded in a centralized sheet for visibility and follow-up.',
   },
 ];
 
-const gptImages = [$1];
+const gptImages = [
+  {
+    src: '/images/portfolio/gpt-1-messy-request.png',
+    alt: 'Initial messy user request before clarification.',
+    caption:
+      'Step 1 — Raw request: the interaction begins with an unstructured business request.',
+  },
+  {
+    src: '/images/portfolio/gpt-2-clarifying-questions.png',
+    alt: 'GPT asking clarifying questions.',
+    caption:
+      'Step 2 — Clarification: targeted questions gather missing business context.',
+  },
+  {
+    src: '/images/portfolio/gpt-3-user-answers.png',
+    alt: 'User answers providing detail.',
+    caption:
+      'Step 3 — Context captured: responses provide the necessary detail for structured output.',
+  },
+  {
+    src: '/images/portfolio/gpt-4-structured-output.png',
+    alt: 'Final structured output.',
+    caption:
+      'Step 4 — Structured output: the request is transformed into a clear, decision-ready summary.',
+  },
+];
 ---
 
 <html lang="en">
@@ -39,21 +67,22 @@ const gptImages = [$1];
         <p class="eyebrow">Portfolio</p>
         <h1>Examples of practical AI, automation, and workflow design</h1>
         <p class="intro">
-          These examples reflect the kind of work I can design and deliver: structured intake,
+          These examples reflect the kind of work I design and deliver: structured intake,
           process improvement, and lightweight automation that solve real business problems
-          without adding unnecessary complexity.
+          without unnecessary complexity.
         </p>
       </section>
 
-      <section class="portfolio-grid" aria-label="Portfolio examples">
+      <section class="portfolio-grid">
         <div class="section-intro">
           <h2>Selected work</h2>
           <p>
-            Two examples are shown below: one focused on workflow automation and one focused on
-            structured AI-assisted intake. Together they show how I approach process design,
-            operational clarity, and practical execution.
+            Two examples are shown below: workflow automation and structured AI-assisted intake.
+            Together they demonstrate how I bring clarity, structure, and execution to business processes.
           </p>
         </div>
+
+        <!-- n8n CASE -->
         <article class="case-study">
           <div class="case-header">
             <p class="case-kicker">Example 1</p>
@@ -61,47 +90,41 @@ const gptImages = [$1];
           </div>
 
           <p>
-            This workflow demonstrates how manual intake can be streamlined into a more consistent,
-            auditable process. A form submission captures defect information, routes it through a
-            structured workflow, and appends the result to a Google Sheet for tracking and follow-up.
+            This workflow transforms a manual defect intake process into a consistent,
+            trackable operating model. A structured form captures inputs, n8n routes the data,
+            and results are recorded in a shared tracking system.
           </p>
 
           <div class="detail-grid">
             <div>
               <h3>Business problem</h3>
               <p>
-                Defect reporting is often inconsistent, incomplete, and difficult to track across
-                teams. This creates rework, slows triage, and reduces visibility into priorities.
+                Inconsistent defect reporting creates rework, slows triage, and reduces visibility.
               </p>
             </div>
             <div>
               <h3>Approach</h3>
               <p>
-                Designed an n8n workflow that standardizes intake, captures key issue details, and
-                pushes the result into a shared tracking structure that supports triage and reporting.
+                Standardized intake and automated routing using n8n with a shared tracking output.
               </p>
             </div>
             <div>
               <h3>Value</h3>
               <p>
-                Improves consistency, reduces manual handoffs, and creates a cleaner operational
-                record for defect management.
+                Cleaner inputs, reduced manual handling, and improved visibility across teams.
               </p>
             </div>
           </div>
 
           <div class="callout">
             <strong>What it demonstrates:</strong>
-            translating a manual business process into a lightweight automation with clearer intake,
-            better visibility, and repeatable execution.
+            translating a manual process into a structured, repeatable workflow.
           </div>
 
           <div class="demo-block">
             <h3>Demo walkthrough</h3>
             <p>
-              This example shows a simple intake-to-tracking flow: information is captured in a
-              consistent format, routed through n8n, and recorded in a shared structure that
-              supports triage and follow-up.
+              End-to-end flow from intake to tracking:
             </p>
 
             <div class="image-grid image-grid-three">
@@ -115,6 +138,7 @@ const gptImages = [$1];
           </div>
         </article>
 
+        <!-- GPT CASE -->
         <article class="case-study">
           <div class="case-header">
             <p class="case-kicker">Example 2</p>
@@ -122,53 +146,43 @@ const gptImages = [$1];
           </div>
 
           <p>
-            This example shows how a custom GPT can be used as a business-facing intake assistant.
-            Rather than jumping directly to a solution, it asks targeted follow-up questions,
-            identifies missing information, and produces a structured summary that supports faster
-            triage and clearer decision-making.
+            This solution improves intake quality by guiding users through clarification before producing
+            a structured, decision-ready summary.
           </p>
 
           <div class="detail-grid">
             <div>
               <h3>Business problem</h3>
               <p>
-                Teams often submit requests that are incomplete, vague, or missing context such as
-                urgency, impact, owner, or dependencies. That leads to back-and-forth, poor intake
-                quality, and slower prioritization.
+                Requests are often vague or incomplete, leading to delays and rework.
               </p>
             </div>
             <div>
               <h3>Approach</h3>
               <p>
-                Designed a GPT to behave like a business intake analyst: ask concise clarifying
-                questions first, then generate a structured request summary with business need,
-                impact, urgency, constraints, and recommended next step.
+                AI-driven intake that asks questions first, then structures the request.
               </p>
             </div>
             <div>
               <h3>Value</h3>
               <p>
-                Converts unstructured requests into decision-ready inputs, improving intake quality
-                while reducing clarification cycles and operational friction.
+                Faster prioritization with clearer, more complete inputs.
               </p>
             </div>
           </div>
 
           <div class="callout">
             <strong>What it demonstrates:</strong>
-            designing AI-assisted workflows that support business process improvement rather than
-            novelty. The focus is on structure, clarity, and usable output.
+            AI used to improve process clarity—not just generate content.
           </div>
 
           <div class="demo-block">
             <h3>Demo walkthrough</h3>
             <p>
-              In this example, a vague request about email cleanup is transformed into a structured
-              summary with business need, impact, urgency, risks, and next step. The screenshots
-              below show the progression from raw request to organized output.
+              Transformation from vague request to structured output:
             </p>
 
-            <div class="image-grid">
+            <div class="image-grid image-grid-three">
               {gptImages.map((image) => (
                 <figure class="image-card">
                   <img src={image.src} alt={image.alt} loading="lazy" />
@@ -183,195 +197,15 @@ const gptImages = [$1];
       <section class="closing">
         <h2>How I approach this work</h2>
         <p>
-          I focus on business-ready solutions: clarify the problem, define the workflow, reduce
-          friction, and use the right level of automation to improve execution. In some cases that
-          means a simple automation. In others, it means designing a structured AI interaction that
-          helps teams intake and organize work more effectively.
+          I focus on business-ready solutions: clarify the problem, define the workflow,
+          reduce friction, and apply the right level of automation.
         </p>
         <p>
-          If your team needs help shaping a workflow, improving intake, or turning a manual process
-          into a more consistent operating model, I’d be glad to discuss it.
+          If your team needs help improving intake, workflow clarity, or execution consistency,
+          I’d be glad to discuss it.
         </p>
       </section>
     </main>
     <Footer />
   </body>
 </html>
-
-<style>
-  :root {
-    --page-max: 1120px;
-    --text: #1f2937;
-    --muted: #5b6472;
-    --surface: #ffffff;
-    --surface-soft: #f7f9fc;
-    --border: #d9e2ec;
-    --accent-soft: #eef4ff;
-  }
-
-  .portfolio-page {
-    width: min(calc(100% - 2rem), var(--page-max));
-    margin: 0 auto;
-    padding: 2rem 0 4rem;
-    color: var(--text);
-  }
-
-  .hero {
-    padding: 1.5rem 0 2.5rem;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .eyebrow,
-  .case-kicker {
-    margin: 0 0 0.5rem;
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--accent);
-  }
-
-  h1 {
-    margin: 0 0 1rem;
-    font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.15;
-  }
-
-  .intro {
-    max-width: 760px;
-    font-size: 1.08rem;
-    line-height: 1.7;
-    color: var(--muted);
-  }
-
-  .portfolio-grid {
-    display: grid;
-    gap: 1.5rem;
-    margin-top: 2.5rem;
-  }
-
-  .section-intro {
-    margin-bottom: 0.25rem;
-  }
-
-  .section-intro h2 {
-    margin: 0 0 0.5rem;
-    font-size: 1.5rem;
-  }
-
-  .section-intro p {
-    margin: 0;
-    max-width: 760px;
-    line-height: 1.7;
-    color: var(--muted);
-  }
-
-  .case-study,
-  .closing {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 1.75rem;
-    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
-  }
-
-  .case-header h2,
-  .closing h2 {
-    margin: 0;
-    font-size: 1.7rem;
-    line-height: 1.25;
-  }
-
-  .case-study > p,
-  .closing p {
-    font-size: 1rem;
-    line-height: 1.7;
-    color: var(--muted);
-  }
-
-  .detail-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
-    margin: 1.5rem 0;
-  }
-
-  .detail-grid div {
-    background: var(--surface-soft);
-    border-radius: 12px;
-    padding: 1rem;
-    border: 1px solid var(--border);
-  }
-
-  .detail-grid h3,
-  .demo-block h3 {
-    margin: 0 0 0.5rem;
-    font-size: 1.02rem;
-  }
-
-  .detail-grid p,
-  .demo-block p,
-  figcaption {
-    margin: 0;
-    font-size: 0.97rem;
-    line-height: 1.65;
-    color: var(--muted);
-  }
-
-  .callout {
-    margin-top: 1rem;
-    padding: 1rem 1.1rem;
-    background: var(--accent-soft);
-    border-left: 4px solid var(--accent);
-    border-radius: 12px;
-    line-height: 1.65;
-  }
-
-  .demo-block {
-    margin-top: 1.75rem;
-    padding-top: 1.25rem;
-    border-top: 1px solid var(--border);
-  }
-
-  .image-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-
-  .image-grid-three {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .image-card {
-    margin: 0;
-    background: var(--surface-soft);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    overflow: hidden;
-  }
-
-  .image-card img {
-    display: block;
-    width: 100%;
-    height: auto;
-    background: #fff;
-  }
-
-  .image-card figcaption {
-    padding: 0.9rem 1rem 1rem;
-  }
-
-  .closing {
-    margin-top: 2rem;
-  }
-
-  @media (max-width: 900px) {
-    .detail-grid,
-    .image-grid,
-    .image-grid-three {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
